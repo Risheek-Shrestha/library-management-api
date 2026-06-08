@@ -98,7 +98,22 @@ API will start at `http://localhost:8080`
     "timestamp": "2026-06-08T13:00:00"
 }
 ```
+## 📸 API in Action
 
+### Get All Books — 200
+![Get All Books](screenshots/get-all-books.png)
+
+### Create Book — 201 Created
+![Create Book](screenshots/create-book.png)
+
+### Book Not Found — 404
+![Not Found](screenshots/not-found.png)
+
+### Validation Error — 400
+![Validation](screenshots/validation-error.png)
+
+### Delete Book — 204
+![Delete](screenshots/delete-book.png)
 ## 👨‍💻 Author
 
 **Risheek Shrestha**

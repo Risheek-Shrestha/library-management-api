@@ -15,9 +15,9 @@ Content-Type: application/json
 
 {
   "title": "",
-  "author": "",
-  "price": -50,
-  "available": null
+  "author": "Craig Walls",
+  "price": 649.99,
+  "available": true
 }
 
 ###
