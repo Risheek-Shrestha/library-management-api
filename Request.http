@@ -1,0 +1,27 @@
+### GET request to example server
+
+###
+GET http://localhost:8080/api/v1/library-management
+
+###
+GET http://localhost:8080/api/v1/library-management/1
+
+###
+GET http://localhost:8080/api/v1/library-management/999
+
+###
+POST http://localhost:8080/api/v1/library-management
+Content-Type: application/json
+
+{
+  "title": "",
+  "author": "",
+  "price": -50,
+  "available": null
+}
+
+###
+DELETE http://localhost:8080/api/v1/library-management/1
+
+###
+PUT http://localhost:8080/api/v1/library-management/1
