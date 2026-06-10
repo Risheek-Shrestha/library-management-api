@@ -41,7 +41,7 @@ public class AuthController {
         user.setPassword(
                 passwordEncoder.encode(request.getPassword())
         );
-        user.setRole("ROLE_USER");
+        user.setRole(request.getRole() != null ? request.getRole() : "ROLE_USER");
 
         userRepository.save(user);
         return ResponseEntity.status(201)
@@ -68,4 +68,5 @@ public class AuthController {
 class AuthRequest{
     private String username;
     private String password;
+    private String role;
 }
