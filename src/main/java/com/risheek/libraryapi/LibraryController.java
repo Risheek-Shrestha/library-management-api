@@ -28,8 +28,8 @@ public class LibraryController {
     }
 
     @GetMapping
-    public Page<Book> getBook(Pageable pageable){
-        return libraryService.getBookByPages(pageable);
+    public ResponseEntity<Page<Book>> getBook(Pageable pageable) {
+        return ResponseEntity.ok(libraryService.getBookByPages(pageable));
     }
 
     @PostMapping

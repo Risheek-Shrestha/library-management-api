@@ -14,6 +14,7 @@ A RESTful API for managing a library's book inventory, built with Spring Boot 3,
 ## 🚀 Features
 
 - Full CRUD operations for books
+- Pagination support for large datasets
 - Global exception handling with clean JSON error responses
 - Bean Validation on incoming requests
 - Proper HTTP status codes (200, 201, 204, 400, 404, 500)
@@ -61,7 +62,7 @@ API will start at `http://localhost:8080`
 
 | Method | Endpoint | Description | Status Code |
 |--------|----------|-------------|-------------|
-| GET | /api/v1/library-management | Get all books | 200 |
+| GET | /api/v1/library-management?page=0&size=5 | Get books with pagination | 200 |
 | GET | /api/v1/library-management/{id} | Get book by ID | 200 |
 | POST | /api/v1/library-management | Add new book | 201 |
 | PUT | /api/v1/library-management/{id} | Update book | 200 |
