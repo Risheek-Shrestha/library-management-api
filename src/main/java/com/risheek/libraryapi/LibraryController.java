@@ -1,6 +1,8 @@
 package com.risheek.libraryapi;
 
 import jakarta.validation.Valid;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,12 +19,17 @@ public class LibraryController {
         this.libraryService = libraryService;
     }
 
-    @GetMapping
-    public List<Book> getBooks(){return libraryService.getAllBooks();}
+//    @GetMapping
+//    public List<Book> getBooks(){return libraryService.getAllBooks();}
 
     @GetMapping("/{id}")
     public Book getBookById(@PathVariable Integer id){
         return libraryService.getBookById(id);
+    }
+
+    @GetMapping
+    public Page<Book> getBook(Pageable pageable){
+        return libraryService.getBookByPages(pageable);
     }
 
     @PostMapping

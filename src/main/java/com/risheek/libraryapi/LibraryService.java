@@ -1,5 +1,7 @@
 package com.risheek.libraryapi;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -16,6 +18,10 @@ public class LibraryService {
 
     public List<Book> getAllBooks() {
         return libraryManagementRepository.findAll();
+    }
+
+    public Page<Book> getBookByPages(Pageable pageable){
+        return libraryManagementRepository.findAll(pageable);
     }
 
     public Book getBookById(Integer id) {
